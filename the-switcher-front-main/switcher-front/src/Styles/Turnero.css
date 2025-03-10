@@ -1,0 +1,54 @@
+@import url('Pallete.css');
+
+.caja-1 * {
+	box-sizing: border-box;
+}
+
+.caja-1 {
+    padding: 10px;
+    max-width: 650px;
+    background: var(--Celeste1);
+    border: 5px dashed var(--Celeste3);
+    box-shadow: 
+        0 0 0 2px var(--Celeste2),
+        0 0 0 12.5px var(--Crema),
+        inset 0 0 0 2px var(--Celeste4),
+        0 5px 10px 15px rgba(0,0,0,0.5),
+        inset 0 0 0 6px var(--Crema),
+        inset 0 0 100vw 100vw beige;
+    color: mediumseagreen;
+    font-family: Marcellus, serif;
+    font-size: 1.70em;
+    text-shadow: 0 2px white;
+    text-align: center;
+}
+
+.caja-2 * {
+	box-sizing: border-box;
+}
+
+.caja-2 {
+    padding: 10px;
+    max-width: 650px;
+    background: var(--Rojo);
+    border: 5px dashed var(--Amarillo);
+    box-shadow: 
+        0 0 0 2px var(--Marron),
+        0 0 0 12.5px var(--Crema),
+        inset 0 0 0 2px var(--Celeste4),
+        0 5px 10px 15px rgba(0,0,0,0.5),
+        inset 0 0 0 6px var(--Crema),
+        inset 0 0 100vw 100vw beige;
+    color: mediumseagreen;
+    font-family: Marcellus, serif;
+    font-size: 1.70em;
+    text-shadow: 0 2px white;
+    text-align: center;
+}
+
+.truncate {
+    white-space: nowrap;       /* Prevents text from wrapping to a new line */
+    overflow: hidden;          /* Hides any text that overflows the container */
+    text-overflow: ellipsis;   /* Adds "..." at the end of truncated text */
+    max-width: 550px;          /* Set a maximum width to ensure the truncation occurs */
+}

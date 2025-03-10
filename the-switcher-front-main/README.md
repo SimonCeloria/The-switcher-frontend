@@ -59,3 +59,4 @@ En caso de error con tailwindCSS:
 ```
 npm install -D tailwindcss postcss autoprefixer
 ```
+

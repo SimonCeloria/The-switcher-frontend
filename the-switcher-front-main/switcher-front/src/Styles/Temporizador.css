@@ -1,0 +1,57 @@
+@property --t {
+	syntax: "<number>";
+	inherits: true;
+  }
+  @property --m {
+	syntax: "<integer>";
+	initial-value: 0;
+	inherits: true;
+  }
+  @property --s {
+	syntax: "<integer>";
+	inherits: true;
+  }
+  .countdown {
+	--m: calc((var(--t) - 30) / 60 );
+	--s: calc(var(--t) - (var(--m)) * 60);
+	display: grid;
+	margin: 1em auto;
+	width: 5em;
+	height: 10vmin;
+	width: 10vmin;
+  }
+  .countdown::after {
+	grid-column: 1;
+	grid-row: 1;
+	font-size: 2.2vmin;
+	place-self: center;
+	font: 'Ubuntu Mono', Consolas, Monaco, monospace;
+	counter-reset: m var(--m) s var(--s);
+	content: counter(m, decimal) ":" counter(s, decimal-leading-zero);
+	animation: var(--blink-animation);
+  }
+
+  @keyframes blink {
+	33%, 66% {
+	  text-shadow: #940a3d 0 0 0.1em;
+	}
+	}
+
+  
+  svg {
+	grid-column: 1;
+	grid-row: 1;
+  }
+
+  [r] {
+	fill: rgb(245, 245, 220); /* Beige */
+	stroke: rgb(221, 156, 43); 
+}
+[r] + [r] {
+	--k: calc(var(--t) / 120);
+	transform: rotate(-90deg);
+	fill: rgb(255, 235, 205); /* Blanched Almond */
+	stroke-linecap: round;
+	stroke: color-mix(in hsl shorter hue, #539b0f calc(var(--k) * 100%), #940a3d);
+	stroke-dasharray: var(--k) 1;
+}

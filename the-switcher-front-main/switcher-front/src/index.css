@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.chat-scrollbar {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  mask-size: 100% 20000px;
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+}
+
+.chat-scrollbar:hover {
+  mask-position: left top;
+  -webkit-mask-position: left top;
+}
+
+/* Estilos globales para todas las scrollbars */
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #381D12; /* Color del "thumb" (parte movible) */
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6e5951; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* Color del fondo de la scrollbar */
+  border-radius: 4px; 
+}

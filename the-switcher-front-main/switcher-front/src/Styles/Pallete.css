@@ -1,0 +1,23 @@
+:root {
+    --Crema: #D7CCA5;
+    --CremaChat: #ebe2c2;
+
+    --Celeste1: #BAC5A0;
+    --Celeste2: #8BB294;
+    --Celeste3: #74A27E;
+    --Celeste4: #8e9b90;
+
+    --Marron: #381D12;
+    --Marron1: #915239;
+    --Marron2: #8c756b;
+
+    --Rojo: #94281E;
+
+    --Amarillo: #DD9C2B;
+  }
+
+  .text-3d {
+    text-shadow: 2px 2px 0px #381D12, /* Lighter shadow */
+    4px 4px 0px #d1d5db, /* Darker shadow for depth */
+    6px 6px 0px rgba(0, 0, 0, 0.5); /* Blur */
+  }
